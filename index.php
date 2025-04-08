@@ -42,7 +42,7 @@ $date = new Date('2025-04-08');
 
 echo $date->getDay();
 echo $date->getMonth('en');
-echo $date->getYear('en');
+echo $date->getYear();
 
 
 ?>
