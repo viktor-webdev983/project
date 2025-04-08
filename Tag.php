@@ -25,6 +25,11 @@ class Tag {
 		return $this;
 	}
 
+	public function removeAttr($name) {
+		unset($this->attrs[$name]);
+		return $this;
+	}
+
 	private function getAttrsStr($attrs) {
 		if(!empty($attrs)) {
 			$result = '';
