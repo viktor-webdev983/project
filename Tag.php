@@ -25,6 +25,13 @@ class Tag {
 		return $this;
 	}
 
+	public function setAttrs($arr) {
+		foreach($arr as $name => $value) {
+			$this->setAttr($name, $value);
+		}
+		return $this;
+	}
+
 	public function removeAttr($name) {
 		unset($this->attrs[$name]);
 		return $this;
