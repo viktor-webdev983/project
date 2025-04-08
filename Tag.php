@@ -89,15 +89,12 @@ class Tag implements iTag {
 	}
 
 	public function setText($text) {
-		return $this->setText($text);
+		$this->text = $text;
+		return $this;
 	}
 
 	public function show() {
-		if(isset($this->text)) {
-			return $this->open().$this->text.$this->close();
-		} else {
-			return '';
-		}
+		return $this->open().$this->text.$this->close();
 	}
 
 	public function removeAttr($name) {
