@@ -59,7 +59,7 @@ class Date {
 $date = new Date('2025-04-08');
 
 echo $date->getDay();
-echo $date->getMonth('ua');
+echo $date->getMonth('en');
 
 
 ?>
