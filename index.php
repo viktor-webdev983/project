@@ -35,6 +35,72 @@ class Date {
     public function getYear() {
         return $this->date->format('Y');
     }
+    
+    public function getWeekDay($lang = null)
+    {
+        $weekday = $this->date->format('N');  // 1 (понед.) до 7 (воскр.)
+
+        // Если язык задан, возвращаем день недели на нужном языке
+        if ($lang === 'ru') {
+            $weekdays = [
+                1 => 'понедельник', 2 => 'вторник', 3 => 'среда', 4 => 'четверг', 5 => 'пятница', 6 => 'суббота', 7 => 'воскресенье'
+            ];
+            return $weekdays[$weekday];
+        } elseif ($lang === 'en') {
+            $weekdays = [
+                1 => 'Monday', 2 => 'Tuesday', 3 => 'Wednesday', 4 => 'Thursday', 5 => 'Friday', 6 => 'Saturday', 7 => 'Sunday'
+            ];
+            return $weekdays[$weekday];
+        }
+        
+        return $weekday;
+    }
+
+    public function addDay($value)
+    {
+        $this->date->modify("+$value day");
+        return $this;
+    }
+
+    public function subDay($value)
+    {
+        $this->date->modify("-$value day");
+        return $this;
+    }
+
+    public function addMonth($value)
+    {
+        $this->date->modify("+$value month");
+        return $this;
+    }
+
+    public function subMonth($value)
+    {
+        $this->date->modify("-$value month");
+        return $this;
+    }
+
+    public function addYear($value)
+    {
+        $this->date->modify("+$value year");
+        return $this;
+    }
+
+    public function subYear($value)
+    {
+        $this->date->modify("-$value year");
+        return $this;
+    }
+
+    public function format($format)
+    {
+        return $this->date->format($format);
+    }
+
+    public function __toString()
+    {
+        return $this->date->format('Y-m-d');
+    }
 
 }
 
@@ -44,5 +110,13 @@ echo $date->getDay();
 echo $date->getMonth('en');
 echo $date->getYear();
 
+echo $date->getWeekDay();     // '3' (среда по умолчанию на английском)
+echo $date->getWeekDay('ru'); // 'среда'
+echo $date->getWeekDay('en'); // 'Wednesday'
+
+echo (new Date('2025-12-31'))->addYear(1); // '2026-12-31'
+echo (new Date('2025-12-31'))->addDay(1);  // '2026-01-01'
+
+echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'
 
 ?>
