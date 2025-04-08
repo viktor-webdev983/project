@@ -37,6 +37,19 @@ class Tag {
 		return $this;
 	}
 
+
+	public function addClass($className) {
+		if(!isset($this->attrs['class'])) {
+			$classNames = explode(' ', $className);
+			if(!in_array($className, $classNames)) {
+				$classNames[] = $className;
+				$this->attrs['class'] = implode(' ', $classNames);
+			}
+		}
+
+		return $this;
+	}
+	
 	private function getAttrsStr($attrs) {
 		if(!empty($attrs)) {
 			$result = '';
