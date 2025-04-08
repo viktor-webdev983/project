@@ -39,7 +39,7 @@ class Tag {
 
 
 	public function addClass($className) {
-		if(!isset($this->attrs['class'])) {
+		if(isset($this->attrs['class'])) {
 			$classNames = explode(' ', $className);
 			if(!in_array($className, $classNames)) {
 				$classNames[] = $className;
