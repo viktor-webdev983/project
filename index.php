@@ -1,6 +1,7 @@
 <?php
-require_once 'Date.php';
-require_once 'Interval.php';
+//require_once 'Date.php';
+//require_once 'Interval.php';
+require_once 'Tag.php';
 
 /*$date = new Date('2025-04-08');
 
@@ -19,6 +20,7 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 
 
 
-
+$tag = new Tag('div');
+echo $tag->open.'text'.$tag->close();
 
 ?>
