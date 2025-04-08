@@ -76,7 +76,7 @@ class Tag implements iTag {
 	public function getAttr($name) {
 		return isset($this->attrs[$name]) ? $this->attrs[$name] : null;
 	}
-	public function setAttr($name, $value) {
+	public function setAttr($name, $value = true) {
 		$this->attrs[$name] = $value;
 		return $this;
 	}
