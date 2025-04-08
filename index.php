@@ -24,7 +24,7 @@ $tag = new Tag('div');
 echo $tag->setAttr('id', 'mu_id')->setAttr('class', 'mu_class')->open() . 'text' . $tag->close();
 
 $tag->removeAttr('id');
-$tag->setAttrs('id' => 'test', 'class' => 'eee']);
+$tag->setAttrs(['id' => 'test', 'class' => 'eee']);
 
 echo $tag->open() . 'test2' . $tag->close();
 ?>
