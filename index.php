@@ -23,7 +23,7 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 $tag = new Tag('div');
 echo $tag->setAttr('id', 'mu_id')->setAttr('class', 'mu_class')->open() . 'text' . $tag->close();
 
-$tag->addClass('new_class mu_class');
+$tag->setAttr('class', 'mu_class')->addClass('new_class mu_class');
 
 echo $tag->open() . 'test2' . $tag->close();
 ?>
