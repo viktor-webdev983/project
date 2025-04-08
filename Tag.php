@@ -45,6 +45,8 @@ class Tag {
 				$classNames[] = $className;
 				$this->attrs['class'] = implode(' ', $classNames);
 			}
+		} else {
+			$this->attrs['class'] = $className;
 		}
 
 		return $this;
