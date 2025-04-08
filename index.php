@@ -21,6 +21,6 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 
 
 $tag = new Tag('div');
-echo $tag->setAttr('id', 'mu_id')->setAttr('class', 'mu_class')->open();
+echo $tag->setAttr('id', 'mu_id')->setAttr('class', 'mu_class')->open() . 'text' . $tag->close();
 
 ?>
