@@ -3,11 +3,10 @@
 class Tag {
 	
 	private $name;
-	private $attrs;
+	private $attrs = [];
 
-	public function __construct($name, $attrs = '') {
+	public function __construct($name) {
 		$this->name = $name;
-		$this->attrs = $attrs;
 	}
 
 	public function open() {
@@ -19,6 +18,11 @@ class Tag {
 	public function close() {
 		$name = $this->name;
 		return "</$name>";
+	}
+
+	public function setAttr($name, $value) {
+		$this->attrs[$name] = $value;
+		return $this;
 	}
 
 	private function getAttrsStr($attrs) {
