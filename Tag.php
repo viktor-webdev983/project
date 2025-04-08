@@ -3,6 +3,7 @@
 class Tag {
 	
 	private $name;
+	private $text;
 	private $attrs = [];
 
 	public function __construct($name) {
@@ -20,6 +21,20 @@ class Tag {
 		return "</$name>";
 	}
 
+	public function getName() {
+		return $this->name;
+	}
+	public function getText() {
+		return $this->text;
+	}
+
+	public function getAttrs() {
+		return $this->attrs;
+	}
+
+	public function getAttr($name) {
+		return isset($this->attrs[$name]) ? $this->attrs[$name] : null;
+	}
 	public function setAttr($name, $value) {
 		$this->attrs[$name] = $value;
 		return $this;
