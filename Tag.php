@@ -12,7 +12,7 @@ class Tag {
 
 	public function open() {
 		$name = $this->name;
-		$attrsStr = getAttrsStr($this->attrs);
+		$attrsStr = $this->getAttrsStr($this->attrs);
 		return "<$name$attrsStr>";
 	}
 	
