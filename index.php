@@ -30,9 +30,9 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 $list = new HtmlList('ul');
 
 echo $list
-->addItem(new ListItem())->setText('item1')
-->addItem(new ListItem())->setText('item2')
-->addItem(new ListItem())->setText('item3')
+->addItem((new ListItem())->setText('item1'))
+->addItem((new ListItem())->setText('item2'))
+->addItem((new ListItem())->setText('item3'))
 ->show();
 
 
