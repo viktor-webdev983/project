@@ -1,6 +1,8 @@
 <?php 
 
 class Link extends Tag {
+    const ACTIVECLASS = 'active';
+
     public function __construct() {
         $this->setAttr('href', '');
 
@@ -14,7 +16,7 @@ class Link extends Tag {
 
     private function activateSelf() {
         if($this->getAttr('href') === $_SERVER['REQUEST_URI']) {
-            $this->addClass('active');
+            $this->addClass(Self::ACTIVECLASS);
         }
     }
 }
