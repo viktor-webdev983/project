@@ -36,7 +36,7 @@ echo $list
 ->addItem((new ListItem())->setText('item3'));*/
 
 
-$form = new Form()->setAttrs([
+$form = (new Form())->setAttrs([
     'action'=>'form.php',
     'method'=>'post'
 ]);
