@@ -19,6 +19,7 @@ echo (new Date('2025-12-31'))->addDay(1);  // '2026-01-01'
 echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 
 
-
-echo (new Tag('div'))->addClass('eee')->addClass('bbb')->show();
+$tag = new Tag('div');
+echo $tag->setText('yest')->show();
+echo $tag->getText();
 ?>
