@@ -13,7 +13,7 @@ class HtmlList extends Tag {
         $result = '';
 		$result .= $this->open();
         foreach($this->items as $item) {
-            $result .= $item->show();
+            $result .= $item;
         }
 		$result .= $this->close();
 
