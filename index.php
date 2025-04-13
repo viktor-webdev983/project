@@ -23,5 +23,5 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 
 //echo (new Image())->setAttrs(['width'=>'200','height'=>'300']);
 
-echo (new Link())->setText('index')->show();
+//echo (new Link())->setText('index')->show();
 ?>
