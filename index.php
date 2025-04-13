@@ -4,8 +4,9 @@
 require_once 'Tag.php';
 //require_once 'Image.php';
 //require_once 'Link.php';
-require_once 'ListItem.php';
-require_once 'HtmlList.php';
+//require_once 'ListItem.php';
+//require_once 'HtmlList.php';
+require_once 'Form.php';
 
 /*$date = new Date('2025-04-08');
 
@@ -27,12 +28,20 @@ echo (new Date('2025-12-31'))->subDay(3)->addYear(1); // '2026-12-28'*/
 
 //echo (new Link())->setText('index')->show();
 
-$list = new HtmlList('ul');
+/*$list = new HtmlList('ul');
 
 echo $list
 ->addItem((new ListItem())->setText('item1'))
 ->addItem((new ListItem())->setText('item2'))
-->addItem((new ListItem())->setText('item3'));
+->addItem((new ListItem())->setText('item3'));*/
 
+
+$form = new Form()->setAttrs([
+    'action'=>'form.php',
+    'method'=>'post'
+]);
+
+echo $form->open();
+echo $form->close();
 
 ?>
