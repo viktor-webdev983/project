@@ -21,6 +21,6 @@ class HtmlList extends Tag {
     }
 
     public function __toString() {
-        return $item->show();
+        return $this->show();
     }
 }
