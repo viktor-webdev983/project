@@ -19,4 +19,8 @@ class HtmlList extends Tag {
 
         return $result;
     }
+
+    public function __toString() {
+        return $item->show();
+    }
 }
